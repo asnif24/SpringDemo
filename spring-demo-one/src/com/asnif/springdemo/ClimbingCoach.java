@@ -7,4 +7,10 @@ public class ClimbingCoach implements Coach {
 		return "Train with the fxxking fingerboard!!";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
