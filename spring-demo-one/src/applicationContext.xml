@@ -14,6 +14,10 @@
 	<bean id="myFortuneService"
 		class="com.asnif.springdemo.HappyFortuneService">
 	</bean>
+	
+	<bean id="myRandomFortuneService"
+		class="com.asnif.springdemo.RandomFortuneService">
+	</bean>
     
     <bean id="myCoach" 
     	class="com.asnif.springdemo.TrackCoach">
@@ -32,6 +36,8 @@
 	
 	<bean id="myClimbCoach" 
 		class="com.asnif.springdemo.ClimbingCoach">
+		<property name="fortuneService" ref="myRandomFortuneService"/>
+		
 	</bean>
 	
 	
