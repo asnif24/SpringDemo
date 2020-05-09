@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class RandomFortuneService implements FortuneService {
 	
-	private String fileName = "D:\\Udemy\\SpringDemo\\spring-demo-one\\src\\fortune-data.txt";
+	private String fileName = "src/fortune-data.txt";
 	private List<String> theFortunes;
 	
 	private Random myRandom = new Random();
