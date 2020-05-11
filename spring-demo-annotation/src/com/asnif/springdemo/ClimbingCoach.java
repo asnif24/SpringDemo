@@ -10,4 +10,10 @@ public class ClimbingCoach implements Coach {
 		return "ARC for 30 mins";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
