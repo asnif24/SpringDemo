@@ -1,5 +1,8 @@
 package com.asnif.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -7,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 //@Component("thatSillyCoach")
 @Component
-@Scope("prototype")
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	@Autowired
@@ -40,5 +43,19 @@ public class TennisCoach implements Coach {
 		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
 	}
+	
+	@PostConstruct
+	public void hihi() {
+		System.out.println("hey man~~");
+	}
+	
+	@PreDestroy
+	public void byebye() {
+		System.out.println("goodbye~~");
+	}
 
 }
+
+
+
+
