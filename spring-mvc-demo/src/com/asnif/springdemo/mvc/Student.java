@@ -12,6 +12,7 @@ public class Student {
 	private String gender;
 	private String favoriteSport;
 	private LinkedHashMap<String, String> sportOptions;
+	private String[] operationSystems;
 	
 	public Student() {
 		
@@ -85,7 +86,14 @@ public class Student {
 	public LinkedHashMap<String, String> getSportOptions() {
 		return sportOptions;
 	}
-	
-	
+
+	public String[] getOperationSystems() {
+		return operationSystems;
+	}
+
+	public void setOperationSystems(String[] operationSystems) {
+		this.operationSystems = operationSystems;
+	}
+
 	
 }

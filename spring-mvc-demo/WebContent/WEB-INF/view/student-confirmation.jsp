@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -25,6 +27,15 @@ Gender: ${student.gender}
 <br><br>
 
 Favorite Sport: ${student.favoriteSport}
+
+<br><br>
+
+Operating Systems:
+<ul>
+	<c:forEach var="temp" items="${student.operationSystems}">
+		<li>${temp}</li>
+	</c:forEach>
+</ul>
 
 </body>
 
