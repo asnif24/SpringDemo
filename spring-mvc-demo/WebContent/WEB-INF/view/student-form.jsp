@@ -16,12 +16,13 @@
 	<br><br>
 	Country: 
 		<form:select path="country">
-			<form:option value="Brazil" label="Brazil"/>
-			<form:option value="Chile" label="Chile"/>
-			<form:option value="Denmark" label="Denmark"/>
-			<form:option value="Spain" label="Spain"/>
-			<form:option value="Taiwan" label="Taiwan"/>
-			<form:option value="Others" label="Others"/>
+<%-- 			<form:option value="Brazil" label="Brazil"/> --%>
+<%-- 			<form:option value="Chile" label="Chile"/> --%>
+<%-- 			<form:option value="Denmark" label="Denmark"/> --%>
+<%-- 			<form:option value="Spain" label="Spain"/> --%>
+<%-- 			<form:option value="Taiwan" label="Taiwan"/> --%>
+<%-- 			<form:option value="Others" label="Others"/> --%>
+			<form:options items="${student.countryOptions}"/>
 		</form:select>
 	
 	<br><br>
