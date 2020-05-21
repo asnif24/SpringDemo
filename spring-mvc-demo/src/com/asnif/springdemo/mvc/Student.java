@@ -9,6 +9,9 @@ public class Student {
 	private String country;
 	private LinkedHashMap<String, String> countryOptions;
 	private String favoriteLanguage;
+	private String gender;
+	private String favoriteSport;
+	private LinkedHashMap<String, String> sportOptions;
 	
 	public Student() {
 		
@@ -61,5 +64,28 @@ public class Student {
 	public void setFavoriteLanguage(String favoriteLanguage) {
 		this.favoriteLanguage = favoriteLanguage;
 	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	
+	public String getFavoriteSport() {
+		return favoriteSport;
+	}
+
+	public void setFavoriteSport(String favoriteSport) {
+		this.favoriteSport = favoriteSport;
+	}
+
+	public LinkedHashMap<String, String> getSportOptions() {
+		return sportOptions;
+	}
+	
+	
 	
 }

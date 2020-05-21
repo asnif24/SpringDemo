@@ -23,6 +23,8 @@ public class StudentController {
 		
 		theModel.addAttribute("theCountryOptions", countryOptions);
 		
+		theModel.addAttribute("theSportOptions", sportOptions);
+		
 		return "student-form";
 	}
 	
@@ -38,6 +40,9 @@ public class StudentController {
 	
 	@Value("#{countryOptions}") 
 	private Map<String, String> countryOptions;
+	
+	@Value("#{sportOptions}")
+	private Map<String, String> sportOptions;
 	
 }
 

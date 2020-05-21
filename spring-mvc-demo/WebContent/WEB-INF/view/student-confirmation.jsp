@@ -18,6 +18,14 @@ Country: ${student.country}
 
 Favorite Language: ${student.favoriteLanguage}
 
+<br><br>
+
+Gender: ${student.gender}
+
+<br><br>
+
+Favorite Sport: ${student.favoriteSport}
+
 </body>
 
 </html>

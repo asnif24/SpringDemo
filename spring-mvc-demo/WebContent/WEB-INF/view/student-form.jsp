@@ -31,10 +31,24 @@
 	<br><br>
 	
 	Favorite Language: 
-	Java<form:radiobutton path="favoriteLanguage" value="Java"/>
-	C#<form:radiobutton path="favoriteLanguage" value="C#"/>
-	PHP<form:radiobutton path="favoriteLanguage" value="PHP"/>
-	Ruby<form:radiobutton path="favoriteLanguage" value="Ruby"/>
+	<form:radiobutton path="favoriteLanguage" value="Java"/>Java
+	<form:radiobutton path="favoriteLanguage" value="C#"/>C#
+	<form:radiobutton path="favoriteLanguage" value="PHP"/>PHP
+	<form:radiobutton path="favoriteLanguage" value="Ruby"/>Ruby
+	
+	<br><br>
+	
+	Gender: 
+	<form:radiobutton path="gender" value="Male"/>Male
+	<form:radiobutton path="gender" value="Female"/>Female
+	<form:radiobutton path="gender" value="Others"/>Others
+	
+	<br><br>
+	
+	Favorite Sport:
+	<form:select path="favoriteSport">
+		<form:options items="${theSportOptions}"/>
+	</form:select>
 	
 	<br><br>
 	

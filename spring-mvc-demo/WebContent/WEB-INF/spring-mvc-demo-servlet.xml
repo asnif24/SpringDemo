@@ -18,6 +18,7 @@
 	<context:component-scan base-package="com.asnif.springdemo" />
 
 	<util:properties  id="countryOptions" location="classpath:../countries.properties" /> 
+	<util:properties  id="sportOptions" location="classpath:../sports.properties" />
 
 	<!-- Step 4: Add support for conversion, formatting and validation support -->
 	<mvc:annotation-driven/>
