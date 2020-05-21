@@ -32,7 +32,7 @@ Favorite Sport: ${student.favoriteSport}
 
 Operating Systems:
 <ul>
-	<c:forEach var="temp" items="${student.operationSystems}">
+	<c:forEach var="temp" items="${student.operatingSystems}">
 		<li>${temp}</li>
 	</c:forEach>
 </ul>

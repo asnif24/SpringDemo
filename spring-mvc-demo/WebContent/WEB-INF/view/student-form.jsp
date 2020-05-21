@@ -53,9 +53,9 @@
 	<br><br>
 	
 	Operation Systems:
-	<form:checkbox path="operationSystems" value="Linux"/>Linux
-	<form:checkbox path="operationSystems" value="Mac OS"/>Mac OS
-	<form:checkbox path="operationSystems" value="MS Windows"/>MS Windows
+	<form:checkbox path="operatingSystems" value="Linux"/>Linux
+	<form:checkbox path="operatingSystems" value="Mac OS"/>Mac OS
+	<form:checkbox path="operatingSystems" value="MS Windows"/>MS Windows
 	
 	<br><br>
 	
