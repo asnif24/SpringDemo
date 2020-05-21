@@ -12,16 +12,16 @@ public class Student {
 	public Student() {
 		
 		// populate country options: use ISO country code
-		countryOptions = new LinkedHashMap<>();
-		
-		countryOptions.put("BR", "Brazil");
-		countryOptions.put("FR", "France");
-		countryOptions.put("TW", "Taiwan");
-		countryOptions.put("DE", "Germany");
-		countryOptions.put("IN", "India");
-		countryOptions.put("JP", "Japan");
-		countryOptions.put("NZ", "New Zealand");
-		countryOptions.put("CA", "Canada");
+//		countryOptions = new LinkedHashMap<>();
+//		
+//		countryOptions.put("BR", "Brazil");
+//		countryOptions.put("FR", "France");
+//		countryOptions.put("TW", "Taiwan");
+//		countryOptions.put("DE", "Germany");
+//		countryOptions.put("IN", "India");
+//		countryOptions.put("JP", "Japan");
+//		countryOptions.put("NZ", "New Zealand");
+//		countryOptions.put("CA", "Canada");
 		
 	}
 
