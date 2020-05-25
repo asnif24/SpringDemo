@@ -19,7 +19,7 @@ public class IdCodeConstraintValidator
 	public boolean isValid(String theId, 
 			ConstraintValidatorContext theConstraintValidatorContext) {
 		
-		boolean result;
+//		boolean result;
 		
 		
 		
@@ -30,7 +30,7 @@ public class IdCodeConstraintValidator
 	private Map<String, String> idPrefix;
 	
 	private boolean isAvailable(String idInput) {
-		int prefixCode = Integer.valueOf(idPrefix[idInput[0]]);
+		int prefixCode = Integer.valueOf(idPrefix.get(idInput.charAt(0)));
 		
 	}
 	
