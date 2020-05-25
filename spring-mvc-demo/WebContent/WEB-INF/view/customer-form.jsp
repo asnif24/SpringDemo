@@ -25,6 +25,9 @@
 		Course Code: <form:input path="courseCode" />
 		<form:errors path="courseCode" cssClass="error"/>
 		<br><br>
+		ID Code: <form:input path="idCode" />
+		<form:errors path="idCode" cssClass="error"/>
+		<br><br>
 		<input type="submit" value="Submit">
 	</form:form>
 </body>

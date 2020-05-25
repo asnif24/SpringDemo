@@ -24,7 +24,16 @@ public class Customer {
 	
 	@CourseCode
 	private String courseCode;
-		
+	
+	@Pattern(regexp="^[A-Z][12][0-9]{8}", message="Non-available form")
+	private String idCode;
+	
+	public String getIdCode() {
+		return idCode;
+	}
+	public void setIdCode(String idCode) {
+		this.idCode = idCode;
+	}
 	public String getCourseCode() {
 		return courseCode;
 	}
