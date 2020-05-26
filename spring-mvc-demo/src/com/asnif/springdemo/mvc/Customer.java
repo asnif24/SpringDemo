@@ -7,6 +7,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import com.asnif.springdemo.mvc.validation.CourseCode;
+import com.asnif.springdemo.mvc.validation.IdCode;
 
 public class Customer {
 	private String firstName;
@@ -25,7 +26,8 @@ public class Customer {
 	@CourseCode
 	private String courseCode;
 	
-	@Pattern(regexp="^[A-Z][12][0-9]{8}", message="Non-available form")
+//	@Pattern(regexp="^[A-Z][12][0-9]{8}", message="Non-available form")
+	@IdCode
 	private String idCode;
 	
 	public String getIdCode() {
