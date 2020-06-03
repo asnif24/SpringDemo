@@ -4,6 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.asnif.hibernate.demo.entity.Instructor;
+import com.asnif.hibernate.demo.entity.InstructorDetail;
 import com.asnif.hibernate.demo.entity.Student;
 
 public class CreateDemo {
@@ -12,22 +14,23 @@ public class CreateDemo {
 		// Create session factory
 		SessionFactory factory = new Configuration()
 					.configure("hibernate.cfg.xml")
-					.addAnnotatedClass(Student.class)
+					.addAnnotatedClass(Instructor.class)
+					.addAnnotatedClass(InstructorDetail.class)
 					.buildSessionFactory();
 		// create session
 		Session session = factory.getCurrentSession();
 		
 		try {
-			// create a student object
-			System.out.println("Creating new student object...");
-			Student tempStudent = new Student("HT", "Lin", "ht@asnif.com");
+			// create the objects
+			Instructor tempInstructor = new Instructor("HT", "Lin", "ht@asnif.com");
+			InstructorDetail tempInstructorDetail = 
+					new InstructorDetail("http://www.asnif.com/videos", "climbing");
+			
+			// associate the objects
+			tempInstructor.setInstructorDetail(tempInstructorDetail);
 			
 			// start a transaction
 			session.beginTransaction();
-			
-			// save the student object
-			System.out.println("Saving the student...");
-			session.save(tempStudent);
 			
 			// commit transaction
 			session.getTransaction().commit();
