@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.asnif.hibernate.demo.entity.Student;
 
-public class CreateStudentDemo {
+public class CreateDemo {
 
 	public static void main(String[] args) {
 		// Create session factory
