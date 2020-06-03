@@ -12,6 +12,6 @@ public class InstructorDetail {
 	
 	// generate getter/setter methods
 	
-	// generate toString method
+	// generate toString() method
 
 }
