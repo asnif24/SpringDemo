@@ -6,7 +6,6 @@ import org.hibernate.cfg.Configuration;
 
 import com.asnif.hibernate.demo.entity.Instructor;
 import com.asnif.hibernate.demo.entity.InstructorDetail;
-import com.asnif.hibernate.demo.entity.Student;
 
 public class CreateDemo {
 
@@ -22,15 +21,26 @@ public class CreateDemo {
 		
 		try {
 			// create the objects
-			Instructor tempInstructor = new Instructor("HT", "Lin", "ht@asnif.com");
+//			Instructor tempInstructor = new Instructor("HT", "Lin", "ht@asnif.com");
+//			InstructorDetail tempInstructorDetail = 
+//					new InstructorDetail("http://www.asnif.com/videos", "climbing");
+			
+			Instructor tempInstructor = new Instructor("Mos", "Burger", "mos@asnif.com");
 			InstructorDetail tempInstructorDetail = 
-					new InstructorDetail("http://www.asnif.com/videos", "climbing");
+					new InstructorDetail("http://www.asnif.com/mosburger", "Burgering");
 			
 			// associate the objects
 			tempInstructor.setInstructorDetail(tempInstructorDetail);
 			
 			// start a transaction
 			session.beginTransaction();
+			
+			// save the instructor
+			// 
+			// Note: this will ALSO save the details object because of CascadeType.ALL
+			// 
+			System.out.println("Saving instructor: "+tempInstructor);
+			session.save(tempInstructor);
 			
 			// commit transaction
 			session.getTransaction().commit();
