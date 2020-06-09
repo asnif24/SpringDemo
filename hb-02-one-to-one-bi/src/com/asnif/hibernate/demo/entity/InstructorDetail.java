@@ -1,10 +1,12 @@
 package com.asnif.hibernate.demo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -36,9 +38,19 @@ public class InstructorDetail {
 	private String hobby;
 	
 	// add new field for instructor (also getter/setters)
+
+	// add @OneToOne annotation
+	@OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
 	private Instructor instructor;
 	
-	
+	public Instructor getInstructor() {
+		return instructor;
+	}
+
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
+	}
+
 	public InstructorDetail() {
 		
 	}
