@@ -1,5 +1,6 @@
 package com.asnif.hibernate.demo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,7 +33,8 @@ public class Course {
 	@Column(name = "title")
 	private String title;
 	
-	@ManyToOne
+	@ManyToOne(cascade = 
+		{CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	@JoinColumn(name = "instructor_id")
 	private Instructor instructor;
 	
