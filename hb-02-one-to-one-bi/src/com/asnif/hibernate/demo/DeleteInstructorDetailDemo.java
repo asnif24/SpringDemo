@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 import com.asnif.hibernate.demo.entity.Instructor;
 import com.asnif.hibernate.demo.entity.InstructorDetail;
 
-public class GetInstructorDetailDemo {
+public class DeleteInstructorDetailDemo {
 
 	public static void main(String[] args) {
 		// Create session factory
@@ -25,14 +25,22 @@ public class GetInstructorDetailDemo {
 			session.beginTransaction();
 			
 			// get the instructor detail object
-			int theId = 16;
+			int theId = 17;
 			InstructorDetail tempInstructorDetail = session.get(InstructorDetail.class, theId);
+			
+			System.out.println("tempInstructorDetail: "+ tempInstructorDetail);
+			
+			System.out.println("the associated instructor: "+ tempInstructorDetail.getInstructor());
 			
 			// print the instructor detail
 			System.out.println("tempInstructorDetail: "+ tempInstructorDetail);
 			
 			// print the associate instructor
 			System.out.println("the associated instructor: "+ tempInstructorDetail.getInstructor());
+			
+			// now let's delete the instructor detail
+			System.out.println("Deleting tempInstructorDetail: "+ tempInstructorDetail);
+			session.delete(tempInstructorDetail);
 			
 			// commit transaction
 			session.getTransaction().commit();
