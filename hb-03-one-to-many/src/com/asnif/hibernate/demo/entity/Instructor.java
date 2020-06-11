@@ -1,5 +1,6 @@
 package com.asnif.hibernate.demo.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -111,7 +112,22 @@ public class Instructor {
 				+ ", instructorDetail=" + instructorDetail + "]";
 	}
 
+	public List<Course> getCourses() {
+		return courses;
+	}
 
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
+
+	// add convenience methods for bi-directional relation ship
+	public void add(Course tempCourse) {
+		if (courses == null) {
+			courses = new ArrayList<>();
+		}
+		courses.add(tempCourse);
+		tempCourse.setInstructor(this);
+	}
 
 	
 	
